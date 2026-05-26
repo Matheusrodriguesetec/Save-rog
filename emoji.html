@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>EMOJI O FILME 2 CONFIRMADO</title>
 
+  <!-- CSS -->
+  <link rel="stylesheet" href="Emoji.css">
+
 </head>
 <body>
 
@@ -17,43 +20,78 @@
 
   <header>
     <h1>EMOJI O FILME</h1>
-    <div class="emoji-gigante">😂🔥💀</div>
-    <p style="font-size:35px;">
+
+    <div class="emoji-gigante">
+      😂🔥💀
+    </div>
+
+    <p class="subtitulo">
       O SITE MAIS MAL FEITO DA INTERNET
     </p>
   </header>
 
   <div class="container">
 
+    <!-- CARD 1 -->
     <div class="card">
+
       <h2>🤯 CINEMA ABSOLUTO</h2>
+
       <p>
         Emoji o Filme mudou minha vida.
         Antes eu era triste...
         agora continuo triste mas com emojis.
       </p>
 
-      <a href="#" class="botao">
+      <!-- botão com som -->
+      <button class="botao" onclick="tocarSom('som1')">
         ASSISTIR AGORA EM 144P
-      </a>
+      </button>
+
+      <!-- audio -->
+      <audio id="som1" src="Midia/luigi-scream-made-with-Voicemod.mp3"></audio>
+
     </div>
 
+    <!-- CARD 2 -->
     <div class="card">
-      <h2>📱 FATOS REAIS </h2>
+
+      <h2>📱 FATOS REAIS</h2>
+
       <p>
         ✔️ 200% de aprovação no zap<br>
         ✔️ Elon Musk chorou vendo<br>
         ✔️ proibido em 72 países (ou não. talvez)<br>
         ✔️ considerado patrimônio cultural do shitpost
       </p>
+
+      <!-- botão extra -->
+      <button class="botao" onclick="tocarSom('som2')">
+        VER FATOS ULTRA REAIS
+      </button>
+
+      <audio id="som2" src="Midia/vineboom-made-with-Voicemod.mp3"></audio>
+
     </div>
 
+    <!-- CARD 3 -->
     <div class="card">
-      <h2 class="warning">⚠️ ALERTA ⚠️</h2>
+
+      <h2 class="warning">
+        ⚠️ ALERTA ⚠️
+      </h2>
+
       <p>
         Este site contém níveis perigosos de cringe.
         Feche imediatamente se você tem bom gosto.
       </p>
+
+      <button class="botao" onclick="tocarSom('som3')">
+        ABRIR MESMO ASSIM
+      </button>
+
+      <audio id="som3" src="Midia/lancer-splat-sound-effect-(deltarune)-made-with-Voicemod.mp3"></audio>
+
     </div>
 
   </div>
@@ -62,21 +100,40 @@
     💀 feito às 3 da manhã tomando energético 💀
   </footer>
 
-  <!-- chuva de emoji -->
   <script>
+
+    /* chuva de emoji */
     const emojis = ["😂","🔥","💀","😎","🤡","📱","😭","🍔","😱"];
 
-    for(let i=0;i<40;i++){
-      const e = document.createElement("div");
-      e.classList.add("emoji-rain");
-      e.innerText = emojis[Math.floor(Math.random()*emojis.length)];
+    for(let i = 0; i < 40; i++){
 
-      e.style.left = Math.random()*100 + "vw";
-      e.style.animationDuration = (Math.random()*5 + 3) + "s";
+      const e = document.createElement("div");
+
+      e.classList.add("emoji-rain");
+
+      e.innerText =
+      emojis[Math.floor(Math.random() * emojis.length)];
+
+      e.style.left = Math.random() * 100 + "vw";
+
+      e.style.animationDuration =
+      (Math.random() * 5 + 3) + "s";
+
       e.style.opacity = Math.random();
 
       document.body.appendChild(e);
     }
+
+    /* função de tocar som */
+    function tocarSom(id){
+
+      const som = document.getElementById(id);
+
+      som.currentTime = 0;
+
+      som.play();
+    }
+
   </script>
 
 </body>

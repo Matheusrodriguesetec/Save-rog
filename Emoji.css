@@ -1,0 +1,114 @@
+
+body{
+    margin:0;
+    background:#111;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
+}
+
+.marquee{
+    background:#ff0080;
+    color:white;
+    padding:12px;
+    font-weight:bold;
+    text-align:center;
+    border-bottom:3px solid white;
+}
+
+header{
+    text-align:center;
+    padding:40px 20px;
+}
+
+header h1{
+    font-size:60px;
+    color:#ffe600;
+    text-shadow:4px 4px 0px #ff0000;
+    margin-bottom:10px;
+}
+
+.emoji-gigante{
+    font-size:70px;
+    margin:15px 0;
+}
+
+.container{
+    width:90%;
+    max-width:900px;
+    margin:auto;
+}
+
+/* Parte onde fiquei com preguiça de terminar, então pedi pro chat GPT, fiz isso as 3 da manhã enquanto tomava Monster de melancia (Programado moderno de 1,68  com 17 anos na cara que passa 16 horas por dia no discord criando dependencia emocional com pessoas que ele viu uma unica vez na vida):D */
+/*Eu definitivamente não tenho paciencia para criar scripts de emojis caindo, então deixa isso com o chat que ele já tem um banco de dados bem mais definido sobre o tema do que eu (nós vamos perder nossos empregos se a ia aprender a se auto programar com precisão)*/
+.card{
+    background:#1f1f1f;
+    border:3px solid #ff0080;
+    border-radius:15px;
+    padding:20px;
+    margin:25px 0;
+    box-shadow:0 0 15px rgba(255,0,128,0.5);
+    transition:0.2s;
+}
+
+.card:hover{
+    transform:scale(1.02);
+}
+
+/* títulos */
+.card h2{
+    color:#00ffe1;
+    margin-top:0;
+}
+
+/* botão */
+.botao{
+    display:inline-block;
+    margin-top:15px;
+    background:#ffe600;
+    color:black;
+    padding:12px 20px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:10px;
+    transition:0.2s;
+}
+
+.botao:hover{
+    background:#ff8800;
+    transform:scale(1.05);
+}
+
+/* alerta */
+.warning{
+    color:#ff4444;
+    text-shadow:2px 2px black;
+}
+
+/* rodapé */
+footer{
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+    background:#1a1a1a;
+    border-top:3px solid #ff0080;
+}
+
+/* emojis caindo (Mambo) */
+.emoji-rain{
+    position:fixed;
+    top:-50px;
+    font-size:30px;
+    animation:fall linear infinite;
+    pointer-events:none;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-10vh);
+    }
+
+    to{
+        transform:translateY(110vh);
+    }
+}
